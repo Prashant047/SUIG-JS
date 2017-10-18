@@ -12,21 +12,29 @@
 <!--Enter Heading Breakout Lesson 1
 
 make a canvas(id is myCanvas) 320*480 (Issue 1)   --> 
+    <canvas id="myCanvas"></canvas>
 
 <script>
 	// JavaScript code goes here
     //We require circle(ball) and rectangles for this game so lesson 1 is how to generate a canvas and draw a circle and rectangle on it.
     
-  var canvas =document.getElementById("");//Give Id (Issue - 1 )
-var ctx = canvas.getContext("2d");
+    var canvas =document.getElementById("myCanvas");//Give Id (Issue - 1 )
+    var ctx = canvas.getContext("2d");
+
+    canvas.height = 320;
+    canvas.width = 480;
 
     ctx.beginPath();
 //draw a rectangle at the top of canvas
+    ctx.fillRect(canvas.width/2-40,0,80,20);
+
     ctx.closePath();
     
     ctx.beginPath();
 //draw a circle in the bottom middle of canvas 
+    ctx.arc(canvas.width/2,canvas.height-20,20,0,Math.PI*2);
     ctx.closePath();
+    ctx.fill();
     
 </script>
 
